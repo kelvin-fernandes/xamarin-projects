@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProdutoApp.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<Style x:Key="Botao" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="#005594" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="BorderRadius" Value="7" />
+				<Setter Property="FontAttributes" Value="Bold" />
+				<Setter Property="FontSize" Value="15" />
+				<Setter Property="HeightRequest" Value="45" />
+			</Style>
+			<Style x:Key="Rotulo" TargetType="Label">
+                <Setter Property="TextColor" Value="#005594" />
+				<Setter Property="HorizontalTextAlignment" Value="Start" />
+				<Setter Property="VerticalTextAlignment" Value="End" />
+				<Setter Property="FontSize" Value="Small" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
