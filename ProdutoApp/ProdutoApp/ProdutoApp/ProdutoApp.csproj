@@ -45,6 +45,7 @@
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\FabricanteVM.cs" />
     <Compile Include="ViewModel\ProdutoVM.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\FabricanteView.xaml.cs">

@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace ProdutoApp.ViewModel {
 	public class ProdutoVM : ViewModelBase {
-		private ObservableCollection<Produto> listaProdutos;
+		public ObservableCollection<Produto> ListaProdutos { get; set; }
 
 		private int codigo;
 
@@ -49,7 +49,7 @@ namespace ProdutoApp.ViewModel {
 		public ICommand AbrirFabricante { get; set; }
 
 		public ProdutoVM() {
-			listaProdutos = new ObservableCollection<Produto>();
+			ListaProdutos = new ObservableCollection<Produto>();
 
 			Salvar = new Command(RealizarGravacao);
 			Listar = new Command(AbrirLista);
@@ -74,7 +74,7 @@ namespace ProdutoApp.ViewModel {
 				Codigo = Codigo,
 				Nome = Nome
 			};
-			listaProdutos.Add(produto);
+			ListaProdutos.Add(produto);
 		}
 	}
 }
