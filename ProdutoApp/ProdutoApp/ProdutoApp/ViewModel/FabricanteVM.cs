@@ -32,9 +32,9 @@ namespace ProdutoApp.ViewModel {
 		}
 
 		private ObservableCollection<Fabricante> fabricantes;
-		
+
 		public ObservableCollection<Fabricante> Fabricantes {
-			get { return fabricantes; }
+			get => fabricantes;
 			set {
 				fabricantes = value;
 				Notify("Fabricantes");
@@ -48,6 +48,19 @@ namespace ProdutoApp.ViewModel {
 			Fabricantes = new ObservableCollection<Fabricante>();
 		}
 
-		public void InserirFabricante() => Fabricantes.Add(new Fabricante{Codigo = this.Codigo, Nome = this.Nome});
+		public FabricanteVM(ObservableCollection<Fabricante> fabricantes) : this() {
+			Fabricantes = fabricantes;
+		}
+
+		public void InserirFabricante() {
+			Fabricantes.Add(new Fabricante {Codigo = this.Codigo, Nome = this.Nome});
+			//Fabricantes.Add(new Fabricante {Codigo = this.Codigo, Nome = this.Nome});
+			LimparCampos();
+		}
+
+		private void LimparCampos() {
+			Codigo = 0;
+			Nome = "";
+		}
 	}
 }

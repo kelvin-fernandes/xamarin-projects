@@ -11,6 +11,7 @@ using Xamarin.Forms;
 namespace ProdutoApp.ViewModel {
 	public class ProdutoVM : ViewModelBase {
 		public ObservableCollection<Produto> ListaProdutos { get; set; }
+		public ObservableCollection<Fabricante> ListaFabricantes { get; set; }
 
 		private int codigo;
 
@@ -32,6 +33,16 @@ namespace ProdutoApp.ViewModel {
 			}
 		}
 
+		private double preco;
+
+		public double Preco {
+			get => preco;
+			set {
+				preco = value;
+				Notify("Preco");
+			}
+		}
+		
 		private string fabricante;
 
 		public string Fabricante {
@@ -50,6 +61,7 @@ namespace ProdutoApp.ViewModel {
 
 		public ProdutoVM() {
 			ListaProdutos = new ObservableCollection<Produto>();
+			ListaFabricantes = new ObservableCollection<Fabricante>();
 
 			Salvar = new Command(RealizarGravacao);
 			Listar = new Command(AbrirLista);
@@ -57,7 +69,7 @@ namespace ProdutoApp.ViewModel {
 			Fabricante = "Adicione Fabricante da Lista";
 		}
 
-		public ProdutoVM(Fabricante fabricante) {
+		public ProdutoVM(Fabricante fabricante) : this() {
 			Fabricante = fabricante.Nome;
 		}
 
@@ -66,15 +78,25 @@ namespace ProdutoApp.ViewModel {
 		}
 
 		private async void AbrirLista() {
-			// await Application.Current.MainPage.Navigation.PushAsync(new View.ListaProdutosView());
+			 await Application.Current.MainPage.Navigation.PushAsync(new View.ListaProdutosView(ListaProdutos));
 		}
 
 		private void RealizarGravacao() {
 			Produto produto = new Produto {
 				Codigo = Codigo,
-				Nome = Nome
+				Nome = Nome,
+				Fabricante = Fabricante,
+				Preco = Preco
 			};
 			ListaProdutos.Add(produto);
+			LimparCampos();
+		}
+
+		private void LimparCampos() {
+			Codigo = 0;
+			Nome = "";
+			Preco = 0;
+			Fabricante = "Adicione Fabricante da Lista";
 		}
 	}
 }

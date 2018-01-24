@@ -4,7 +4,22 @@
              x:Class="ProdutoApp.View.ListaProdutosView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Product List!" />
+            <ListView ItemsSource="{Binding Produtos}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="Center">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+									<Label Text="{Binding Codigo}" TextColor="#f35e20" />
+									<Label Text="{Binding Nome}" TextColor="#503026" />
+									<Label Text="{Binding Fabricante}" TextColor="#503026" />
+									<Label Text="{Binding Preco}" TextColor="#f35e20" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

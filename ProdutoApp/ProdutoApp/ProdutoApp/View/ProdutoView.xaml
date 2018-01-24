@@ -5,15 +5,19 @@
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label Text="Codigo" Style="StaticResource Rotulo"/>
-			<Entry Text="{Binding Codigo}" />
+			<Entry Text="{Binding Codigo}" Keyboard="Numeric" />
 
 			<Label Text="Nome do Produto" Style="StaticResource Rotulo"/>
 	        <Entry Text="{Binding Nome}" />
 
-            <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding Fabricante}" Style="StaticResource Rotulo" />
-                <Button Text="+" Command="{Binding AbrirFabricante}" Style="{StaticResource Botao}" />
+	        <Label Text="Preço" Style="StaticResource Rotulo"/>
+	        <Entry Text="{Binding Preco}" Keyboard="Numeric" />
+
+			<StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Fabricante}" Style="StaticResource Rotulo" VerticalTextAlignment="Center" />
+                <Button Text="+" Command="{Binding AbrirFabricante}" Style="{StaticResource Botao}" VerticalOptions="End"/>
             </StackLayout>
+
             <Button Text="Salvar" Command="{Binding Salvar}" Style="{StaticResource Botao}" />
             <Button Text="Listar" Command="{Binding Listar}" Style="{StaticResource Botao}" />
         </StackLayout>

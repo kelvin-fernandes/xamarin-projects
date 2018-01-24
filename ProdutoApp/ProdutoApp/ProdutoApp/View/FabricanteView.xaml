@@ -5,9 +5,11 @@
     <ContentPage.Content>
         <StackLayout Padding="20">
             <Label Text="Codigo" Style="{StaticResource Rotulo}" />
-			<Entry Text="{Binding Codigo}" />
+			<Entry Text="{Binding Codigo}" Keyboard="Numeric" />
+
 			<Label Text="Nome Fabricante" />
 			<Entry Text="{Binding Nome}" />
+
 			<Button Text="Salvar" Command="{Binding Salvar}" Style="{StaticResource Botao}" />
 			<ListView ItemsSource="{Binding Fabricantes}" x:Name="listaFornecedor">
 				<ListView.ItemTemplate>
