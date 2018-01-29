@@ -1,0 +1,16 @@
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\HelloXamarin.dll
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\HelloXamarin.pdb
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\obj\Debug\HelloXamarin.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\obj\Debug\HelloXamarin.MainPage.xaml.g.cs
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\obj\Debug\HelloXamarin.App.xaml.g.cs
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\obj\Debug\HelloXamarin.View.Login.xaml.g.cs
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\obj\Debug\HelloXamarin.dll
+C:\Users\Aluno\Documents\Git\HelloXamarin\HelloXamarin\HelloXamarin\obj\Debug\HelloXamarin.pdb

@@ -12,12 +12,12 @@ namespace ProdutoApp {
 	public partial class App: Application {
 
 		public static ObservableCollection<Produto> ListaProdutos;
-		public static ObservableCollection<Fabricante> listaFabricantes;
+		public static ObservableCollection<Fabricante> ListaFabricantes;
 
 		public App() {
 			InitializeComponent();
 			ListaProdutos = new ObservableCollection<Produto>();
-			listaFabricantes = new ObservableCollection<Fabricante>();
+			ListaFabricantes = new ObservableCollection<Fabricante>();
 			MainPage = new NavigationPage(new ProdutoView());
 		}
 
