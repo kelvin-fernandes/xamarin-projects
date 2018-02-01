@@ -3,8 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoanBookApp.View.UsuarioLivroListView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
-    </ContentPage.Content>
+		<StackLayout Padding="20">
+			<ListView ItemsSource="{Binding LivrosDoUsuario}" x:Name="listaLivrosDoUsuario">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="Center">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+									<Label Text="{Binding Nome}" TextColor="#f35e20" />
+									<Label Text="{Binding Autor}" TextColor="#503026" />
+									<Label Text="{Binding Editora}" TextColor="#503026" />
+									<Label Text="{Binding Ano}" TextColor="#503026" />
+									<Label Text="{Binding PrecoDeVenda}" TextColor="#503026" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
 </ContentPage>

@@ -12,10 +12,14 @@ namespace LoanBookApp {
 
 		public static ObservableCollection<Usuario> ListaUsuarios { get; set; }
 		public static ObservableCollection<Livro> ListaLivros { get; set; }
+		public static ObservableCollection<Livro> LivrosDoUsuario { get; set; }
 
 		public App() {
 			InitializeComponent();
 
+			ListaUsuarios = new ObservableCollection<Usuario>();
+			ListaLivros = new ObservableCollection<Livro>();
+			LivrosDoUsuario = new ObservableCollection<Livro>();
 			MainPage = new NavigationPage(new MainView());
 		}
 

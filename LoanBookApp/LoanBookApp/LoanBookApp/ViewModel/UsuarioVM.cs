@@ -43,26 +43,114 @@ namespace LoanBookApp.ViewModel {
 			}
 		}
 
-		private ObservableCollection<Usuario> usuarios;
+		private string usuario;
 
-		public ObservableCollection<Usuario> Usuarios {
-			get { return App.ListaUsuarios; }
+		public string Usuario {
+			get => (usuario != null && !usuario.Equals(String.Empty)) ? usuario.ToUpper() : usuario;
 			set {
-				Usuarios = App.ListaUsuarios;
-				Notify("ListaUsuarios");
+				usuario = value;
+				Notify("Usuario");
 			}
 		}
 
-		public ICommand AbrirLivros { get; set; }
+		private ObservableCollection<Usuario> usuarios;
+
+		public ObservableCollection<Usuario> Usuarios {
+			get => App.ListaUsuarios;
+			set {
+				usuarios = App.ListaUsuarios;
+				Notify("Usuarios");
+			}
+		}
+		
+		private ObservableCollection<Livro> livrosDoUsuario;
+
+		public ObservableCollection<Livro> LivrosDoUsuario {
+			get => livrosDoUsuario;
+			set {
+				livrosDoUsuario = value;
+				Notify("LivrosDoUsuario");
+			}
+		}
+
+		private ObservableCollection<Livro> livros;
+
+		public ObservableCollection<Livro> Livros {
+			get => App.ListaLivros;
+			set {
+				livros = App.ListaLivros;
+				Notify("TodosOsLivros");
+			}
+		}
+
+		public ICommand Salvar { get; set; }
+		public ICommand AbrirLivrosUsuario { get; set; }
+		public ICommand TodosOsLivros { get; set; }
 		
 		public UsuarioVM() {
-			Usuarios = App.ListaUsuarios;
+			Usuarios = new ObservableCollection<Usuario>();
+			LivrosDoUsuario = new ObservableCollection<Livro>();
+			Livros = App.ListaLivros;
 
-			AbrirLivros = new Command(AbrirLivrosAction);
+			Salvar = new Command(SalvarCommand);
+			AbrirLivrosUsuario = new Command(AbrirLivrosAction);
+			TodosOsLivros = new Command(TodosOsLivrosAction);
+
+			Usuario = "Escolha um Usuário";
+		}
+
+		public UsuarioVM(Usuario _usuario) : this() {
+			Usuario = _usuario.Nome;
+		}
+
+		private void SalvarCommand() {
+			if (VerificarCampos()) {
+				Usuario novoUsuario = new Usuario {
+					Nome = Nome,
+					Telefone = Telefone,
+					Endereco = Endereco
+				};
+				App.ListaUsuarios.Add(novoUsuario);
+				LimparCampos();
+			}
+			else {
+				//TODO Show message like 'Toast' on Android
+			}
 		}
 
 		private async void AbrirLivrosAction() {
-			await Application.Current.MainPage.Navigation.PushAsync(new UsuarioLivroListView());
+			if(VerificarUsuario())
+				await Application.Current.MainPage.Navigation.PushAsync(new UsuarioLivroListView(){Title = Usuario});
+			//else
+				//TODO Show message like 'Toast' on Android
+		}
+
+		private async void TodosOsLivrosAction() {
+			if(VerificarUsuario())
+				await Application.Current.MainPage.Navigation.PushAsync(new LivroView(true));
+			//else
+				//TODO Show message like 'Toast' on Android
+		}
+
+		private bool VerificarUsuario() {
+			if (!Usuario.Equals(String.Empty) && !Usuario.Equals("Escolha um Usuário".ToUpper()))
+				return true;
+
+			return false;
+		}
+
+		private bool VerificarCampos() {
+			if(Nome != null && Telefone != null && Endereco != null)
+				if (Nome.Length > 0 && Telefone.Length > 0 && Endereco.Length > 0)
+					return true;
+
+			return false;
+		}
+
+		private void LimparCampos() {
+			Nome = "";
+			Telefone = "";
+			Endereco = "";
 		}
 	}
 }

@@ -1,3 +1,4 @@
+C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\obj\Debug\LoanBookApp.Android.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\bin\Debug\LoanBookApp.Android.dll
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\bin\Debug\LoanBookApp.Android.pdb
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\bin\Debug\LoanBookApp.Android.apk
@@ -27,7 +28,6 @@ C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.An
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\obj\Debug\LoanBookApp.Android.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\obj\Debug\LoanBookApp.Android.dll
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\obj\Debug\LoanBookApp.Android.pdb
 C:\Users\Aluno\Documents\xamarin-projects\LoanBookApp\LoanBookApp\LoanBookApp.Android\obj\Debug\android\bin\LoanBookApp.Android.apk

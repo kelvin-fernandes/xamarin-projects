@@ -4,8 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using LoanBookApp.Model;
 using ProdutoApp.ViewModel;
+using Xamarin.Forms;
 
 namespace LoanBookApp.ViewModel {
 	public class LivroVM : ViewModelBase{
@@ -60,18 +62,53 @@ namespace LoanBookApp.ViewModel {
 			}
 		}
 
-		private ObservableCollection<Livro> listaLivros;
+		private ObservableCollection<Livro> livros;
 
-		public ObservableCollection<Livro> ListaLivros {
-			get { return App.ListaLivros; }
+		public ObservableCollection<Livro> Livros {
+			get => App.ListaLivros;
 			set {
-				listaLivros = App.ListaLivros;
-				Notify("ListaLivros");
+				livros = App.ListaLivros;
+				Notify("Livros");
 			}
 		}
 
+		public ICommand Salvar { get; set; }
+		
 		public LivroVM() {
-			ListaLivros = App.ListaLivros;
+			Livros = App.ListaLivros;
+
+			Salvar = new Command(SalvarAction);
+		}
+
+		private void SalvarAction() {
+			if (VerificarCampos()) {
+				Livro novoLivro = new Livro {
+					Nome = Nome,
+					Autor = Autor,
+					Editora = Editora,
+					Ano = Ano,
+					PrecoDeVenda = PrecoDeVenda
+				};
+				App.ListaLivros.Add(novoLivro);
+
+				LimparCampos();
+			}
+		}
+
+		private bool VerificarCampos() {
+			if(Nome != null && Autor != null && Editora != null && Ano != 0 && PrecoDeVenda != 0)
+				if (Nome.Length > 0 && Autor.Length > 0 && Editora.Length > 0)
+					return true;
+
+			return false;
+		}
+
+		private void LimparCampos() {
+			Nome = "";
+			Autor = "";
+			Editora = "";
+			Ano = 0;
+			PrecoDeVenda = 0;
 		}
 	}
 }

@@ -3,17 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoanBookApp.View.UsuarioView">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="20">
 			<Label Text="Nome" Style="{StaticResource LblDefault}"/>
 	        <Entry Text="{Binding Nome}" />
 			<Label Text="Telefone" Style="{StaticResource LblDefault}"/>
 	        <Entry Text="{Binding Telefone}" />
 			<Label Text="Endereço" Style="{StaticResource LblDefault}"/>
 	        <Entry Text="{Binding Endereco}" />
+	        <Button Text="Salvar" Command="{Binding Salvar}" Style="{StaticResource BtnDefault}"/>
 	        <StackLayout Orientation="Horizontal">
-		        <Label Text="{Binding Usuarios}" Style="{StaticResource LblDefault}" VerticalTextAlignment="Center" />
-		        <Button Text="Ver Livros" Command="{Binding AbrirLivros}" Style="{StaticResource BtnDefault}" VerticalOptions="End"/>
+		        <Label x:Name="u" Text="{Binding Usuario}" Style="{StaticResource LblDefault}" VerticalTextAlignment="Center" />
+		        <Button Text="Ver Livros" Command="{Binding AbrirLivrosUsuario}" Style="{StaticResource BtnDefault}" VerticalOptions="End"/>
 	        </StackLayout>
-		</StackLayout>
+	        <Button Text="Todos os Livros" Command="{Binding TodosOsLivros}" Style="{StaticResource BtnDefault}"/>
+	        <ListView ItemsSource="{Binding Usuarios}" x:Name="listaUsuarios">
+		        <ListView.ItemTemplate>
+			        <DataTemplate>
+						<ViewCell>
+							<StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="Center">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+									<Label Text="{Binding Nome}" TextColor="#f35e20" />
+									<Label Text="{Binding Telefone}" TextColor="#503026" />
+									<Label Text="{Binding Endereco}" TextColor="#503026" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+		        </ListView.ItemTemplate>
+	        </ListView>
+	        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -3,8 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LoanBookApp.View.LivroView">
     <ContentPage.Content>
-        <StackLayout>
-            
-        </StackLayout>
+        <StackLayout Padding="20">
+			<Label Text="Nome" Style="{StaticResource LblDefault}"/>
+	        <Entry Text="{Binding Nome}" />
+			<Label Text="Autor" Style="{StaticResource LblDefault}"/>
+			<Entry Text="{Binding Autor}" />
+			<Label Text="Editora" Style="{StaticResource LblDefault}"/>
+			<Entry Text="{Binding Editora}" />
+			<Label Text="Ano" Style="{StaticResource LblDefault}"/>
+			<Entry Text="{Binding Ano}" />
+			<Label Text="Preco de Venda" Style="{StaticResource LblDefault}"/>
+			<Entry Text="{Binding PrecoDeVenda}" />
+	        <Button Text="Salvar" Command="{Binding Salvar}" Style="{StaticResource BtnDefault}"/>
+			<ListView ItemsSource="{Binding Livros}" x:Name="listaLivros">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout BackgroundColor="#eee" Orientation="Vertical" VerticalOptions="Center">
+								<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+									<Label Text="{Binding Nome}" TextColor="#f35e20" />
+									<Label Text="{Binding Autor}" TextColor="#503026" />
+									<Label Text="{Binding Editora}" TextColor="#503026" />
+									<Label Text="{Binding Ano}" TextColor="#503026" />
+									<Label Text="{Binding PrecoDeVenda}" TextColor="#503026" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
