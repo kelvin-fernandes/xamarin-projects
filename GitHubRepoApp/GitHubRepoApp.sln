@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubRepoApp.Android", "GitHubRepoApp\GitHubRepoApp.Android\GitHubRepoApp.Android.csproj", "{98016386-BA8F-4F23-BF19-5CB45EE14C7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubRepoApp", "GitHubRepoApp\GitHubRepoApp\GitHubRepoApp.csproj", "{24F72DC6-ECD3-4F9E-AD27-83F3F0757134}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98016386-BA8F-4F23-BF19-5CB45EE14C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98016386-BA8F-4F23-BF19-5CB45EE14C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98016386-BA8F-4F23-BF19-5CB45EE14C7D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{98016386-BA8F-4F23-BF19-5CB45EE14C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98016386-BA8F-4F23-BF19-5CB45EE14C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98016386-BA8F-4F23-BF19-5CB45EE14C7D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{24F72DC6-ECD3-4F9E-AD27-83F3F0757134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F72DC6-ECD3-4F9E-AD27-83F3F0757134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F72DC6-ECD3-4F9E-AD27-83F3F0757134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F72DC6-ECD3-4F9E-AD27-83F3F0757134}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {078296C1-A246-4A0F-86F8-185A5F216772}
+	EndGlobalSection
+EndGlobal

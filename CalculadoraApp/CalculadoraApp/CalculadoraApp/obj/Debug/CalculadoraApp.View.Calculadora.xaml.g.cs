@@ -11,8 +11,8 @@
 namespace CalculadoraApp.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Aluno\\Documents\\GitHub\\CalculadoraApp\\CalculadoraApp\\CalculadoraApp\\View" +
-        "\\Calculadora.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\kelvin-fernandes\\Documents\\xamarin-projects\\CalculadoraApp\\CalculadoraAp" +
+        "p\\CalculadoraApp\\View\\Calculadora.xaml")]
     public partial class Calculadora : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
