@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamarinPages="clr-namespace:XamarinPages;assembly=XamarinPages"
+             x:Class="XamarinPages.UITabbedPage">
+    <TabbedPage.Children>
+        <ContentPage BackgroundColor="Green" Title="Tab 1">
+            <ContentPage.Content>
+                  <Button Text="Go to CarouselPage" Clicked="Button_OnClicked" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </ContentPage.Content>
+        </ContentPage>
+        <ContentPage BackgroundColor="Blue" Title="Tab 2" >
+            <ContentPage.Content>
+                <Label Text="Página 2" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </ContentPage.Content>
+        </ContentPage>
+        <ContentPage BackgroundColor="Red" Title="Tab 3">
+            <ContentPage.Content>
+                <Label Text="Página 3" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </ContentPage.Content>
+        </ContentPage>
+        <xamarinPages:Page4 />
+    </TabbedPage.Children>
+</TabbedPage>
