@@ -58,9 +58,9 @@ namespace ConsumingApi.ViewModel {
             }
         }
 
-        private double _temperatura;
+        private string _temperatura;
 
-        public double Temperatura {
+        public string Temperatura {
             get => _temperatura;
             set {
                 _temperatura = value;
@@ -78,9 +78,9 @@ namespace ConsumingApi.ViewModel {
             }
         }
 
-        private double _tempMinima;
+        private string _tempMinima;
 
-        public double TempMinima {
+        public string TempMinima {
             get => _tempMinima;
             set {
                 _tempMinima = value;
@@ -88,9 +88,9 @@ namespace ConsumingApi.ViewModel {
             }
         }
 
-        private double _tempMaxima;
+        private string _tempMaxima;
 
-        public double TempMaxima {
+        public string TempMaxima {
             get => _tempMaxima;
             set {
                 _tempMaxima = value;
@@ -134,12 +134,16 @@ namespace ConsumingApi.ViewModel {
             Nuvens = rootObject.clouds.all;
             Latitude = rootObject.coord.lat;
             Longitude = rootObject.coord.lon;
-            Temperatura = rootObject.main.temp;
+            Temperatura = KelvinToCelsius(rootObject.main.temp).ToString() + " ºC";
             Humidade = rootObject.main.humidity;
-            TempMaxima = rootObject.main.temp_max;
-            TempMinima = rootObject.main.temp_min;
+            TempMaxima = KelvinToCelsius(rootObject.main.temp_max).ToString() + " ºC";
+            TempMinima = KelvinToCelsius(rootObject.main.temp_min).ToString() + " ºC";
             Pais = rootObject.sys.country;
             Velocidade = rootObject.wind.speed;
+        }
+
+        public double KelvinToCelsius(double kelvin) {
+            return kelvin - 273.15;
         }
     }
 }
