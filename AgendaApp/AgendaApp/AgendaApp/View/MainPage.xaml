@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AgendaApp.View"
+             x:Class="AgendaApp.View.MainPage">
+	<ContentPage.Content>
+		<StackLayout Padding="10" BackgroundColor="White">
+			<Label Text="Contatos" TextColor="Black" FontSize="20" FontFamily="Bookman Old Style" />
+
+			<ListView ItemsSource="{Binding Contatos}" x:Name="infoContato">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ImageCell ImageSource="~/Resources/drawable/Foto.jpg" Text="{Binding Nome}" TextColor="Black"/>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+			<Button Text="Novo Contato" Command="{Binding CadastrarCommand}" 
+		        BackgroundColor="Green" FontAttributes="Bold" TextColor="White"
+			    FontSize="16" FontFamily="Bookman Old Style" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaApp.View.ContatoView">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="White">
+            <Label Text="Nome" TextColor="Black" FontSize="20" FontFamily="Bookman Old Style" />
+            <Entry Text="{Binding Nome}" Placeholder="Nome" />
+
+            <Label Text="Contato" TextColor="Black" FontSize="20" FontFamily="Bookman Old Style" />
+            <Entry Text="{Binding Celular}" Placeholder="Celular" />
+            <Entry Text="{Binding Email}" Placeholder="Email" />
+
+            <Button Text="Salvar" Command="{Binding SalvarCommand}" 
+                    BackgroundColor="Green" FontAttributes="Bold" 
+                    FontSize="16" FontFamily="Bookman Old Style" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
