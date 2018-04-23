@@ -6,12 +6,12 @@ namespace AgendaApp.Repository {
     public class Repository<T> : IDisposable {
         public SQLiteConnection Connection { get; set; }
 
-        public void init() {
+        public Repository() {
             var config = DependencyService.Get<Services.IConfig>();
             Connection = new SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.Diretorio, "banco-agenda.db3"));
             Connection.CreateTable<T>();
         }
-
+        
         public void Insert(T objeto) {
             Connection.Insert(objeto);
         }
