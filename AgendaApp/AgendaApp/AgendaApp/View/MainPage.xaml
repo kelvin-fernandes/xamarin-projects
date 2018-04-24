@@ -10,7 +10,16 @@
 			<ListView ItemsSource="{Binding Contatos}" x:Name="infoContato">
 				<ListView.ItemTemplate>
 					<DataTemplate>
-						<ImageCell ImageSource="~/Resources/drawable/Foto.jpg" Text="{Binding Nome}" TextColor="Black"/>
+						<ViewCell>
+							<ViewCell.ContextActions>
+								<MenuItem Command="{Binding Path=BindingContext.EditarCommand, Source={x:Reference Name=infoContato}}"
+								          CommandParameter="{Binding .}" Text="Editar" />
+								<MenuItem Command="{Binding Path=BindingContext.ExcluirCommand, Source={x:Reference Name=infoContato}}"
+								          CommandParameter="{Binding .}" Text="Deletar" IsDestructive="True" />
+							</ViewCell.ContextActions>
+							<Image Source="~/Resources/drawable/foto.png"/>
+							<Label Text="{Binding Nome}" TextColor="Black"/>
+						</ViewCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
